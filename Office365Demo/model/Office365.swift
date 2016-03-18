@@ -29,7 +29,7 @@ class Office365 {
     class func getInstance() -> Office365{
         
         //enter client ID and redirect uri
-        let office365 = Office365(clientID: "blablabla", redirectUri: "http://xtalkapp.com/office365clientios/oauth2.php")
+        let office365 = Office365(clientID: "blabla", redirectUri: "http://xtalkapp.com/office365clientios/oauth2.php")
         
         return office365
         

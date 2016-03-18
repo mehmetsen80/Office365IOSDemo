@@ -17,7 +17,7 @@
 		D87CFD421C9CA4040021BBDD /* Office365DemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D87CFD411C9CA4040021BBDD /* Office365DemoUITests.swift */; };
 		D87CFF7F1C9CB8FC0021BBDD /* Office365APIController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D87CFF7E1C9CB8FC0021BBDD /* Office365APIController.swift */; };
 		D87CFF821C9CB9420021BBDD /* Office365.swift in Sources */ = {isa = PBXBuildFile; fileRef = D87CFF811C9CB9420021BBDD /* Office365.swift */; };
-		D87CFF871C9CBCF30021BBDD /* Office365LoginButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D87CFF861C9CBCF30021BBDD /* Office365LoginButton.swift */; };
+		D87CFF8C1C9CC2010021BBDD /* Office365LoginButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D87CFF8B1C9CC2010021BBDD /* Office365LoginButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,7 +58,7 @@
 		D87CFF811C9CB9420021BBDD /* Office365.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Office365.swift; path = model/Office365.swift; sourceTree = "<group>"; };
 		D87CFF831C9CB9D50021BBDD /* Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
 		D87CFF841C9CBA370021BBDD /* Office365Demo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Office365Demo.entitlements; sourceTree = "<group>"; };
-		D87CFF861C9CBCF30021BBDD /* Office365LoginButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Office365LoginButton.swift; sourceTree = "<group>"; };
+		D87CFF8B1C9CC2010021BBDD /* Office365LoginButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Office365LoginButton.swift; path = custom/Office365LoginButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,7 +121,7 @@
 		D87CFD201C9CA4040021BBDD /* Office365Demo */ = {
 			isa = PBXGroup;
 			children = (
-				D87CFF851C9CBC940021BBDD /* button */,
+				D87CFF8A1C9CC1D90021BBDD /* custom */,
 				D87CFF841C9CBA370021BBDD /* Office365Demo.entitlements */,
 				D87CFF801C9CB9160021BBDD /* model */,
 				D87CFF7D1C9CB8D60021BBDD /* api */,
@@ -170,12 +170,12 @@
 			name = model;
 			sourceTree = "<group>";
 		};
-		D87CFF851C9CBC940021BBDD /* button */ = {
+		D87CFF8A1C9CC1D90021BBDD /* custom */ = {
 			isa = PBXGroup;
 			children = (
-				D87CFF861C9CBCF30021BBDD /* Office365LoginButton.swift */,
+				D87CFF8B1C9CC2010021BBDD /* Office365LoginButton.swift */,
 			);
-			name = button;
+			name = custom;
 			sourceTree = "<group>";
 		};
 		EBCBF9BEEB45C26675C18E57 /* Frameworks */ = {
@@ -377,7 +377,7 @@
 				D87CFD241C9CA4040021BBDD /* ViewController.swift in Sources */,
 				D87CFF821C9CB9420021BBDD /* Office365.swift in Sources */,
 				D87CFD221C9CA4040021BBDD /* AppDelegate.swift in Sources */,
-				D87CFF871C9CBCF30021BBDD /* Office365LoginButton.swift in Sources */,
+				D87CFF8C1C9CC2010021BBDD /* Office365LoginButton.swift in Sources */,
 				D87CFF7F1C9CB8FC0021BBDD /* Office365APIController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -29,13 +29,12 @@ class ViewController: UIViewController {
             self.btnOffice365Login.setTitle("Log in with Office365", forState: UIControlState.Normal)
             self.loggedIn = false
             
-            let userDefaults = NSUserDefaults.standardUserDefaults()
-            if let email: String = userDefaults.stringForKey("email") {
-                self.lblEmail.text = email
-            }
+            self.lblEmail.text = ""
+            NSUserDefaults.standardUserDefaults().setObject(nil, forKey: "email")
+            NSUserDefaults.standardUserDefaults().synchronize()
         }
         else {
-            self.lblEmail.text = ""
+            
             // Attempt to get a token
             authMgr.login() {
                 (authenticated: Bool, token: String) -> Void in
