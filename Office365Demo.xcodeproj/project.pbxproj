@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B90AE30F2ADEA62AB56DA68F /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 222A175FC664854DD3F2B649 /* libPods.a */; };
 		D87CFD221C9CA4040021BBDD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D87CFD211C9CA4040021BBDD /* AppDelegate.swift */; };
 		D87CFD241C9CA4040021BBDD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D87CFD231C9CA4040021BBDD /* ViewController.swift */; };
 		D87CFD271C9CA4040021BBDD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D87CFD251C9CA4040021BBDD /* Main.storyboard */; };
@@ -34,6 +35,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		094716D8DA93537142958572 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		222A175FC664854DD3F2B649 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		A8D6EF6CEFA643C20B6DFA48 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		D87CFD1E1C9CA4040021BBDD /* Office365Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Office365Demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D87CFD211C9CA4040021BBDD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D87CFD231C9CA4040021BBDD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -54,6 +58,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B90AE30F2ADEA62AB56DA68F /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,6 +79,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C1C72A0028B65DBCAD3FB821 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				094716D8DA93537142958572 /* Pods.debug.xcconfig */,
+				A8D6EF6CEFA643C20B6DFA48 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		D87CFD151C9CA4040021BBDD = {
 			isa = PBXGroup;
 			children = (
@@ -81,6 +95,8 @@
 				D87CFD351C9CA4040021BBDD /* Office365DemoTests */,
 				D87CFD401C9CA4040021BBDD /* Office365DemoUITests */,
 				D87CFD1F1C9CA4040021BBDD /* Products */,
+				C1C72A0028B65DBCAD3FB821 /* Pods */,
+				EBCBF9BEEB45C26675C18E57 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -125,6 +141,14 @@
 			path = Office365DemoUITests;
 			sourceTree = "<group>";
 		};
+		EBCBF9BEEB45C26675C18E57 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				222A175FC664854DD3F2B649 /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -132,9 +156,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D87CFD461C9CA4050021BBDD /* Build configuration list for PBXNativeTarget "Office365Demo" */;
 			buildPhases = (
+				AB0F9DC00EFB01B72D2AB6B6 /* Check Pods Manifest.lock */,
 				D87CFD1A1C9CA4040021BBDD /* Sources */,
 				D87CFD1B1C9CA4040021BBDD /* Frameworks */,
 				D87CFD1C1C9CA4040021BBDD /* Resources */,
+				9083962A4AD4A3C4E7A40DCA /* Embed Pods Frameworks */,
+				92B385D9117B7CEA36A5AB93 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -250,6 +277,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		9083962A4AD4A3C4E7A40DCA /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		92B385D9117B7CEA36A5AB93 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AB0F9DC00EFB01B72D2AB6B6 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		D87CFD1A1C9CA4040021BBDD /* Sources */ = {
@@ -397,6 +472,7 @@
 		};
 		D87CFD471C9CA4050021BBDD /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 094716D8DA93537142958572 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Office365Demo/Info.plist;
@@ -408,6 +484,7 @@
 		};
 		D87CFD481C9CA4050021BBDD /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A8D6EF6CEFA643C20B6DFA48 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Office365Demo/Info.plist;
@@ -484,6 +561,7 @@
 				D87CFD481C9CA4050021BBDD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D87CFD491C9CA4050021BBDD /* Build configuration list for PBXNativeTarget "Office365DemoTests" */ = {
 			isa = XCConfigurationList;
@@ -492,6 +570,7 @@
 				D87CFD4B1C9CA4050021BBDD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D87CFD4C1C9CA4050021BBDD /* Build configuration list for PBXNativeTarget "Office365DemoUITests" */ = {
 			isa = XCConfigurationList;
@@ -500,6 +579,7 @@
 				D87CFD4E1C9CA4050021BBDD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
