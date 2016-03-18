@@ -15,6 +15,9 @@
 		D87CFD2C1C9CA4040021BBDD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D87CFD2A1C9CA4040021BBDD /* LaunchScreen.storyboard */; };
 		D87CFD371C9CA4040021BBDD /* Office365DemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D87CFD361C9CA4040021BBDD /* Office365DemoTests.swift */; };
 		D87CFD421C9CA4040021BBDD /* Office365DemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D87CFD411C9CA4040021BBDD /* Office365DemoUITests.swift */; };
+		D87CFF7F1C9CB8FC0021BBDD /* Office365APIController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D87CFF7E1C9CB8FC0021BBDD /* Office365APIController.swift */; };
+		D87CFF821C9CB9420021BBDD /* Office365.swift in Sources */ = {isa = PBXBuildFile; fileRef = D87CFF811C9CB9420021BBDD /* Office365.swift */; };
+		D87CFF871C9CBCF30021BBDD /* Office365LoginButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D87CFF861C9CBCF30021BBDD /* Office365LoginButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +54,11 @@
 		D87CFD3D1C9CA4040021BBDD /* Office365DemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Office365DemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D87CFD411C9CA4040021BBDD /* Office365DemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Office365DemoUITests.swift; sourceTree = "<group>"; };
 		D87CFD431C9CA4040021BBDD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D87CFF7E1C9CB8FC0021BBDD /* Office365APIController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Office365APIController.swift; path = api/Office365APIController.swift; sourceTree = "<group>"; };
+		D87CFF811C9CB9420021BBDD /* Office365.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Office365.swift; path = model/Office365.swift; sourceTree = "<group>"; };
+		D87CFF831C9CB9D50021BBDD /* Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
+		D87CFF841C9CBA370021BBDD /* Office365Demo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Office365Demo.entitlements; sourceTree = "<group>"; };
+		D87CFF861C9CBCF30021BBDD /* Office365LoginButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Office365LoginButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,12 +121,17 @@
 		D87CFD201C9CA4040021BBDD /* Office365Demo */ = {
 			isa = PBXGroup;
 			children = (
+				D87CFF851C9CBC940021BBDD /* button */,
+				D87CFF841C9CBA370021BBDD /* Office365Demo.entitlements */,
+				D87CFF801C9CB9160021BBDD /* model */,
+				D87CFF7D1C9CB8D60021BBDD /* api */,
 				D87CFD211C9CA4040021BBDD /* AppDelegate.swift */,
 				D87CFD231C9CA4040021BBDD /* ViewController.swift */,
 				D87CFD251C9CA4040021BBDD /* Main.storyboard */,
 				D87CFD281C9CA4040021BBDD /* Assets.xcassets */,
 				D87CFD2A1C9CA4040021BBDD /* LaunchScreen.storyboard */,
 				D87CFD2D1C9CA4040021BBDD /* Info.plist */,
+				D87CFF831C9CB9D50021BBDD /* Bridging-Header.h */,
 			);
 			path = Office365Demo;
 			sourceTree = "<group>";
@@ -139,6 +152,30 @@
 				D87CFD431C9CA4040021BBDD /* Info.plist */,
 			);
 			path = Office365DemoUITests;
+			sourceTree = "<group>";
+		};
+		D87CFF7D1C9CB8D60021BBDD /* api */ = {
+			isa = PBXGroup;
+			children = (
+				D87CFF7E1C9CB8FC0021BBDD /* Office365APIController.swift */,
+			);
+			name = api;
+			sourceTree = "<group>";
+		};
+		D87CFF801C9CB9160021BBDD /* model */ = {
+			isa = PBXGroup;
+			children = (
+				D87CFF811C9CB9420021BBDD /* Office365.swift */,
+			);
+			name = model;
+			sourceTree = "<group>";
+		};
+		D87CFF851C9CBC940021BBDD /* button */ = {
+			isa = PBXGroup;
+			children = (
+				D87CFF861C9CBCF30021BBDD /* Office365LoginButton.swift */,
+			);
+			name = button;
 			sourceTree = "<group>";
 		};
 		EBCBF9BEEB45C26675C18E57 /* Frameworks */ = {
@@ -220,6 +257,12 @@
 				TargetAttributes = {
 					D87CFD1D1C9CA4040021BBDD = {
 						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = RLAHF6FL89;
+						SystemCapabilities = {
+							com.apple.Keychain = {
+								enabled = 1;
+							};
+						};
 					};
 					D87CFD311C9CA4040021BBDD = {
 						CreatedOnToolsVersion = 7.2;
@@ -332,7 +375,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				D87CFD241C9CA4040021BBDD /* ViewController.swift in Sources */,
+				D87CFF821C9CB9420021BBDD /* Office365.swift in Sources */,
 				D87CFD221C9CA4040021BBDD /* AppDelegate.swift in Sources */,
+				D87CFF871C9CBCF30021BBDD /* Office365LoginButton.swift in Sources */,
+				D87CFF7F1C9CB8FC0021BBDD /* Office365APIController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -475,10 +521,12 @@
 			baseConfigurationReference = 094716D8DA93537142958572 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Office365Demo/Office365Demo.entitlements;
 				INFOPLIST_FILE = Office365Demo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = nau.Office365Demo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Office365Demo/Bridging-Header.h";
 			};
 			name = Debug;
 		};
@@ -487,10 +535,12 @@
 			baseConfigurationReference = A8D6EF6CEFA643C20B6DFA48 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Office365Demo/Office365Demo.entitlements;
 				INFOPLIST_FILE = Office365Demo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = nau.Office365Demo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Office365Demo/Bridging-Header.h";
 			};
 			name = Release;
 		};
