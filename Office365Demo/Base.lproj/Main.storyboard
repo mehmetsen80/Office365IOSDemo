@@ -3,13 +3,12 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Entry View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Office365Demo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="entryView" id="BYZ-38-t0r" customClass="EntryViewController" customModule="Office365Demo" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -18,48 +17,175 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T2M-Tk-YDN" customClass="Office365LoginButton" customModule="Office365Demo" customModuleProvider="target">
-                                <rect key="frame" x="44" y="134" width="232" height="40"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="3ja-O3-EAL"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
-                                <state key="normal" title="Log in with Office365">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="loginWith365:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Oje-TR-bsJ"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Ad-pi-d44">
-                                <rect key="frame" x="48" y="222" width="225" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="5Vl-mM-3VR"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="loading..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w75-Xz-rIP">
+                                <rect key="frame" x="96" y="273" width="129" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" red="0.44008443809999997" green="0.078362342139999999" blue="0.084881316799999995" alpha="1" colorSpace="calibratedRGB"/>
-                        <constraints>
-                            <constraint firstItem="5Ad-pi-d44" firstAttribute="top" secondItem="T2M-Tk-YDN" secondAttribute="bottom" constant="48" id="Kno-rj-Kyg"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="5Ad-pi-d44" secondAttribute="trailing" constant="31" id="OLU-Aa-hDz"/>
-                            <constraint firstItem="T2M-Tk-YDN" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="28" id="Qdg-Ou-U6C"/>
-                            <constraint firstItem="T2M-Tk-YDN" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="114" id="be7-Aj-Lxp"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="T2M-Tk-YDN" secondAttribute="trailing" constant="28" id="pcs-wz-mf6"/>
-                            <constraint firstItem="5Ad-pi-d44" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="32" id="qcW-i1-rzb"/>
-                        </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
-                    <connections>
-                        <outlet property="btnOffice365Login" destination="T2M-Tk-YDN" id="e23-eh-ejP"/>
-                        <outlet property="lblEmail" destination="5Ad-pi-d44" id="nGR-2I-456"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="286" y="429"/>
+            <point key="canvasLocation" x="284" y="407"/>
+        </scene>
+        <!--Profile-->
+        <scene sceneID="mLb-VI-Gcp">
+            <objects>
+                <viewController title="Profile" id="rPD-ae-glF" customClass="ProfileViewController" customModule="Office365Demo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="RWR-c5-XT4"/>
+                        <viewControllerLayoutGuide type="bottom" id="mAv-zk-Is6"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="9Rp-2p-6zU">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.44008443809999997" green="0.078362342139999999" blue="0.084881316799999995" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="hVu-7I-CCh">
+                        <barButtonItem key="rightBarButtonItem" title="Log out" style="plain" id="mP9-bu-4GL">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="SiC-Xv-1sD">
+                                <rect key="frame" x="233" y="7" width="71" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Log out"/>
+                                <connections>
+                                    <action selector="logout:" destination="rPD-ae-glF" eventType="touchUpInside" id="zOr-vZ-nE1"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KfJ-1a-ELP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2083" y="1483"/>
+        </scene>
+        <!--Home View Controller-->
+        <scene sceneID="pQh-r7-TLc">
+            <objects>
+                <viewController id="898-ZF-x0S" customClass="HomeViewController" customModule="Office365Demo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="LIt-Kc-zVV"/>
+                        <viewControllerLayoutGuide type="bottom" id="gSK-PZ-hdH"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="9YV-NM-nRx">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.44008443809999997" green="0.078362342139999999" blue="0.084881316799999995" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="nNq-8e-SQh">
+                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="add" id="a4e-Cv-fh5"/>
+                    </navigationItem>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zjG-Ke-moQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2083" y="87"/>
+        </scene>
+        <!--Office 365 Email App-->
+        <scene sceneID="tiy-Kb-cpC">
+            <objects>
+                <tabBarController storyboardIdentifier="mainTabBar" title="Office 365 Email App" id="CZI-CS-7nK" sceneMemberID="viewController">
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="6y2-Xn-KRX">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="M4g-p6-RAJ" kind="relationship" relationship="viewControllers" id="19S-Gg-fWQ"/>
+                        <segue destination="TfM-g4-3uu" kind="relationship" relationship="viewControllers" id="fpR-K2-4qf"/>
+                        <segue destination="Vmv-Bk-Ezr" kind="relationship" relationship="viewControllers" id="O7v-5f-GUd"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3Ft-Ou-0iY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="821" y="407"/>
+        </scene>
+        <!--Home-->
+        <scene sceneID="XHW-Fk-aRr">
+            <objects>
+                <navigationController title="Home" automaticallyAdjustsScrollViewInsets="NO" id="M4g-p6-RAJ" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Home" image="icon-home" id="ccJ-33-efP"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="HrZ-aX-RYU">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="898-ZF-x0S" kind="relationship" relationship="rootViewController" id="cv2-S8-xFF"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mpe-DY-Uu1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1551" y="87"/>
+        </scene>
+        <!--Groups-->
+        <scene sceneID="1Ik-9o-Tc3">
+            <objects>
+                <viewController title="Groups" id="4bg-UY-p6p" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="UMf-Jo-Yl4"/>
+                        <viewControllerLayoutGuide type="bottom" id="ymd-Zo-sb2"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="SCC-Mf-ftC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.44008443809999997" green="0.078362342139999999" blue="0.084881316799999995" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="L35-Ls-SvN"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Iid-n2-vqg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2083" y="735"/>
+        </scene>
+        <!--Profile-->
+        <scene sceneID="fp3-Xq-yc3">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Vmv-Bk-Ezr" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Profile" image="icon-profile" id="jfr-ZX-T6b"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="OME-lO-IJi">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="rPD-ae-glF" kind="relationship" relationship="rootViewController" id="Azf-9r-rYR"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Epx-TL-JM6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1551" y="1483"/>
+        </scene>
+        <!--Groups-->
+        <scene sceneID="tmO-4m-6I6">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="TfM-g4-3uu" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Groups" image="icon-group" id="NnO-Nw-EMG"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="pNr-pU-nsh">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="4bg-UY-p6p" kind="relationship" relationship="rootViewController" id="xwd-FF-6aV"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jCY-Io-Za4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1551" y="735"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="icon-group" width="24" height="24"/>
+        <image name="icon-home" width="24" height="24"/>
+        <image name="icon-profile" width="24" height="24"/>
+    </resources>
 </document>
